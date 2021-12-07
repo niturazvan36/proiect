@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'chat',
     'crispy_forms',
-    'channels'
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -91,8 +91,7 @@ DATABASES = {
         'PASSWORD': r'silviucandale',
         'HOST': 'localhost',
         'PORT': '5432',
-
-
+        'ATOMIC_REQUESTS': True,
         'OPTIONS': {
 
 
@@ -146,3 +145,11 @@ LOGIN_REDIRECT_URL = 'home'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CRISPY_CLASS_CONVERTERS = {'textinput': "textinput inputtext"}
 ASGI_APPLICATION = 'capp.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
