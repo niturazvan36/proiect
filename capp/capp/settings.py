@@ -91,10 +91,7 @@ DATABASES = {
         'PASSWORD': r'silviucandale',
         'HOST': 'localhost',
         'PORT': '5432',
-        'ATOMIC_REQUESTS': True,
         'OPTIONS': {
-
-
         },
     },
 }
@@ -141,7 +138,7 @@ os.path.join(BASE_DIR,'static')
 
 
 
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = '/global'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CRISPY_CLASS_CONVERTERS = {'textinput': "textinput inputtext"}
 ASGI_APPLICATION = 'capp.asgi.application'
@@ -153,3 +150,4 @@ CHANNEL_LAYERS = {
         },
     },
 }
+LOGOUT_REDIRECT_URL= 'home'

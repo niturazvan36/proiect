@@ -6,9 +6,10 @@ from .forms import UserCreation
 from django.contrib import messages
 from .models import Chat,ChatRoom
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import logout
 # Create your views here.
 def home(req):
-    return render(req, 'home.html', {})
+    return render(req, 'home.php', {})
 
 
 def register(req):
