@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'chat',
     'crispy_forms',
     'channels',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -93,6 +94,7 @@ DATABASES = {
         'PORT': '5432',
         'OPTIONS': {
         },
+        'ATOMIC_REQUESTS': True,
     },
 }
 # Password validation
