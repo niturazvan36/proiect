@@ -143,7 +143,7 @@ os.path.join(BASE_DIR,'static')
 LOGIN_REDIRECT_URL = '/global'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CRISPY_CLASS_CONVERTERS = {'textinput': "textinput inputtext"}
-ASGI_APPLICATION = 'capp.asgi.application'
+ASGI_APPLICATION = r'capp.asgi.application'
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',

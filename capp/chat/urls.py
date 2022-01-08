@@ -9,6 +9,6 @@ urlpatterns = [
     path('register',views.register, name='register'),
     path('<str:room_name>/', Room.as_view(), name='room'),
     path('api/data', views.get_data, name='api-data'),
-path('api/chart/data', ChartData.as_view()),
+    path('api/chart/data', ChartData.as_view()),
     path('logout', LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name='logout'),
 ]

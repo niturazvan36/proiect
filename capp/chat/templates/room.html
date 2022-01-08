@@ -10,7 +10,10 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
-    <span class="navbar-brand mb-2 h1"><a class="titlu" href="{% url 'home'%}">Real-time chat application</a></span>
+    <span class="navbar-brand mb-2 h1"><a class="titlu" href="{% url 'home'%}">
+        <img src="https://images.assetsdelivery.com/compings_v2/pxlprostudio/pxlprostudio1901/pxlprostudio190103617.jpg"
+             width="30" height="30" class="d-inline-block align-top" alt="">
+        Real-time chat application</a></span>
     <form action="{% url 'logout' %}" method="post">
         {%csrf_token%}
 
